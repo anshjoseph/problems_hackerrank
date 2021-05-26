@@ -30,9 +30,19 @@ inputs
 4 5 6
 10 8 -12
 """
+import math
 def matrix(arr):
-    print(arr)
-
+    size = len(arr[0])
+    d1i = 0
+    d2i = size - 1
+    d1 = list()
+    d2 = list()
+    for i in arr:
+        d1.append(i[d1i])
+        d2.append(i[d2i])
+        d1i += 1
+        d2i -= 1
+    return abs(sum(d1) - sum(d2))
 if __name__ == "__main__":
     size = int(input())
     array = list()
