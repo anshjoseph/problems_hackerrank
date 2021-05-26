@@ -24,7 +24,19 @@ Input Format
 The first line contains an integer, , the size of the array.
 The second line contains  space-separated integers that describe ."""
 def cont_plus_munus_zero(arr):
-    pass
+    size = len(arr)
+    count = [0,0,0]
+    for i in arr:
+        if i>0:
+            count[2] += 1
+        elif i<0:
+            count[0] += 1
+        else:
+            count[1] += 1
+    count = [i/size for i in count]
+    print("{:.6f}".format(count[2]))
+    print("{:.6f}".format(count[0]))
+    print("{:.6f}".format(count[1]))
 if __name__ == "__main__":
     size = int(input())
     data = list(map(int,input().split(" ")))
