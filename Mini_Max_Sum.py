@@ -36,7 +36,10 @@ Sample Input
 def miniMaxSum(arr):
     sum_array = list()
     for _ in range(len(arr)):
-        sum_array.append(sum(arr[_:]))
+        temp = arr[::]
+        temp.remove(arr[_])
+        # print(temp)
+        sum_array.append(sum(temp))
     print(f"{min(sum_array)} {max(sum_array)}")
 
 if __name__ == "__main__":
