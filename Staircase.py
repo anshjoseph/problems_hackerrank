@@ -26,9 +26,13 @@ Input Format
 
 A single integer, , denoting the size of the staircase.
 """
-
+def staircase(n):
+    count = n
+    for i in range(1,n+1):
+        print( " "*count + "#"*i)
+        count -= 1
 
 
 if __name__ == "__main__":
     size = int(input()) 
-    
+    staircase(size)
