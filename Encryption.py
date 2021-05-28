@@ -42,8 +42,32 @@ One line of text, the string
 # import re
 
 def encryption(s):
-    # Write your code here
-    return s
+    row = int(len(s)**0.5)
+    col = row + 1
+    data = list()
+    temp = col
+    index = 0
+    for i in range((len(s)//col) + 1):
+        if i == len(s)//col + 1:
+            data.append(s[index:])
+        else:
+            data.append(s[index:col])
+        col += temp
+        index += temp
+    # print(data)
+    result = list()
+    # result =data
+    # print(row,temp)
+    for c in range(len(data[0])):
+        temp_str = ""
+        for r in range(len(data)):
+            try:
+             temp_str += data[r][c]
+            except:
+                pass
+        result.append(temp_str)
+    result = " ".join(result) 
+    return result
 
 if __name__ == "__main__":
     data = input()
