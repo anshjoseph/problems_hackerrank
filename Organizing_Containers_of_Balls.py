@@ -41,6 +41,23 @@ Each of the next  sets of lines is as follows:
 The first line contains an integer , the number of containers (rows) and ball types (columns).
 Each of the next  lines contains  space-separated integers describing row .
 """
+def organizingContainers(container):
+    # Write your code here
+    pass
 if __name__ == "__main__":
-    test_case = int(input())
+    test = True
+    if test:
+        test_case = int(input())
+        martixs = list()
+        for _ in range(test_case):
+            size = int(input())
+            temp = list()
+            for __ in range(size):
+                row = list(map(int,input().split(" ")))
+                temp.append(row)
+            martixs.append(temp)
+        organizingContainers(martixs)
+    else:
+        test_data = [[1 ,3 ,1][2, 1, 2], [3, 3, 3]]
+        organizingContainers(test_data)    
     
