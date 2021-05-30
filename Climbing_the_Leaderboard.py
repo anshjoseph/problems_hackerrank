@@ -81,8 +81,8 @@ def climbingLeaderboard(ranked, player):
         temp.sort(reverse=True)
         result.append(temp.index(play)+1)
         pass
-    print(result[::-1])
-    pass
+    # print(result[::-1])
+    return result
 
 
 if __name__ == "__main__":

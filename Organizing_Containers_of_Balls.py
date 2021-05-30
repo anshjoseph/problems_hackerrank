@@ -43,10 +43,21 @@ Each of the next  lines contains  space-separated integers describing row .
 """
 def organizingContainers(container):
     # Write your code here
+    number_of_container = len(container[0])
+    number_of_content = len(container)
+    max_col = list()
+    transform_container = list()
+    #col max
+    for i in range(number_of_container):
+        max_col.append(max([j[i] for j in container]))
+        transform_container.append([j[i] for j in container])
+    
+    # print(transform_container)
+    # print(max_col)
     pass
 if __name__ == "__main__":
     test = True
-    if test:
+    if not test:
         test_case = int(input())
         martixs = list()
         for _ in range(test_case):
@@ -58,6 +69,6 @@ if __name__ == "__main__":
             martixs.append(temp)
         organizingContainers(martixs)
     else:
-        test_data = [[1 ,3 ,1][2, 1, 2], [3, 3, 3]]
+        test_data = [[1 ,3 ,1],[2, 1, 2], [3, 3, 3]]
         organizingContainers(test_data)    
     
